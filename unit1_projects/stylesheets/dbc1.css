@@ -1,0 +1,35 @@
+.header {
+	font-size: 24px;
+	color: red;
+	font-family: Arial;
+}
+
+#about {
+	background-color: green;
+	font-family: Cursive;
+	font-size: 16px;
+}
+
+.activites {
+	font-family: Arial;
+	color: blue;
+	font-size: 14px;
+}
+
+.places {
+	font-family: Times;
+	color: red;
+	font-size: 14px;
+}
+
+#musical {
+	background-color: yellow;
+	font-family: cursive;
+	font-size: 16px;
+}
+
+#languages {
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+}
