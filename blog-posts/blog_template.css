@@ -1,52 +1,110 @@
-div {
-	border-radius: 15px;
-}
-
-#header {
-	background-color: #b4f2a9;
-	height: 60px;
-	position:fixed;
-	z-index: 1;
-	width: 1230px;
-	margin-bottom: 25px;
-	margin-top: -10px;
-	margin-left: 10px;
-	margin-right: 0px;
+#wrapper {
+	margin: 0 auto;
+	width: 96%;
 
 }
 
-#main_content {
-	background-color: #a4d3ee;
-	height:auto;
-	width: 800px;
+body{
+	font-size: 100%
+}
+
+header {
+	height: 40px;
+	padding: 2em;
+}
+
+#header h1 {
+	margin-top: 50px;
+	margin-left: 39%;
+	font-size: 45px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#header h3 {
+	position: relative;
+	font-family:  'Quicksand', sans-serif;
+	margin-left: 43%;
+	font-weight: lighter;
+	margin-top: -30px;
+	margin-bottom: 60px;
+}
+
+#home_main_content {
+	background-color: #ff9d69;
+	height:400px;
+	width:85%;
 	clear:both;
-	float:left;
-	margin-left: 230px;
 	padding: 10px 10px 10px 10px;
 	position: relative;
 	margin-top: 80px;
 	margin-bottom: 80px;
+	margin: 0 auto;
+}
+#main_content {
+	background-color: #ff9d69;
+	height:auto;
+	width:85%;
+	clear:both;
+	padding: 10px 10px 10px 10px;
+	position: relative;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	margin: 0 auto;
+}
+
+#home_main_content #self {
+	width: 200px;
+	height: 190px;
+	float: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#home_main_content #cover {
+	width: 300px;
+	height: 395px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 3px;
+}
+
+
+#home_main_content #killin {
+	height: 395px;
+	width: 400px;
+	float: left;
+	padding-left: 35px;
+	padding-top: 2px;
+}
+
+#home_main_content table {
+	width: 210px;
+	float: left;
+	height: 400px;
+}
+
+#home_main_content #handplant{
+	height: 190px;
+	width: 200px;
+	padding-left: 10px;
+	float: left;
 }
 
 #header td {
-	float:left;
-	font-family: Times;
+	font-family: 'Shadows Into Light', cursive;;
 	font-size: 24px;
-	padding-left: 50px;
-	padding-top: 13px;
+	padding-left: 25px;
+}
+
+#header table {
+	margin: 0 auto;
+	margin-top: -25px;
+	margin-bottom: 25px;
 }
 
 img {
 	height:300px;
 	width: 500px;
-}
-
-body {
-	background-repeat: no-repeat;
-	background-size: 100%;
-	z-index: 2;
-	background-attachment: fixed;
-	opacity: 0.8;
 }
 
 a:hover {
@@ -64,21 +122,10 @@ table a:hover {
 	font-weight: bold;
 }
 
-table a {
-	border: 2px solid;
-	border-radius: 1px;
-	padding: 2px 2px 2px 2px;
-}
 
 #footer {
 	background-color: #b4f2a9;
-	height: 60px;
 	clear: both;
-}
-
-#footer p {
-	font-family: Times;
-	font-size: 24px;
-	padding-left: 25px;
-	padding-top: 13px;
+	text-align: center;
+	margin-top: 1em;
 }

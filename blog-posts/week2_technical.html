@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="blog_template.css"/>
+		<title>Mark Hoyt's DBC Blog</title>
+	</head>
+	<body>
+		<div id="header">
+				<h1>MARK HOYT</h1>
+				<h3>MY DBC JOURNEY</h3>
+				<nav><table>
+					<tr>
+						<td><a href="http://markhoyt84.github.io/index.html">Home</a></td>
+						<td><a href="https://markhoyt84.github.io/blog-posts/week1_technical.html">Technical Blog</a></td>
+						<td><a href="http://markhoyt84.github.io/blog-posts/week1_cultural.html">
+						Cultural Blog</a></td>
+						<td><a href="">Unit-1-Projects</a></td>
+						<td><a href="mailto:mark.hoyt970@gmail.com">Contact</a></td>
+				</tr>
+				</table></nav>
+			</div>
+		<h1></h1>
+		<div id="main_content">
+			<h1>Positioning</h1>
+			<h3>What is it and how do the different positioning of elements work?</h3>
+				<p>Overall the most important concept to remember with positioning is that every single element on your page is a block, literally a rectangular block of pixels.  Once this concept is acheived, the positioning of those 'blocks' is a much easier idea.  Many different occasions call for different positioning, depending on where you want those blocks to line up.  I have found in my own work that no single style of positioning is any better than the others, they just all have their times and places where one will prove superior or easier than the others to acheive your desired results.
+				</p>
+			<h3>Relative Positioning</h3>
+				<p>Relative positioning seems to be the most confusing of all of the positioning.  When using relative positioning the key to remember is that the element is "relative to itself".  When you enter an element in relative positioning it puts the element where it would normally be within the HTML flow (same as static) and any changes move it from that normal spot.  So if you specify a bottom of 10px, then the element will move up 10 px from where it would 'normally' be located.  Once you set a relative position the ability to use the z-index property is now available to you as well, which will place this new relative positioned element in front of any static elements.  If a parent element is positioned relatively you open up huge opportunities to absolutely position child elements within the parent element.  
+				</p>
+				<img src="http://4.bp.blogspot.com/-B_Qoi5JZoFM/UYKkeNFQObI/AAAAAAAAA4g/RkdtdpL3LBs/s1600/absolute-relative-intro.png">
+			<h3>Absolute Positioning</h3>
+				<p>Absolute positioning is a great tool for positioning elements exactly where you want them within your page.  The only catch is that the 'absolute' positioning is relative to the parent element.  Nesting is in full effect when using Absolute positioning because the absolute position is only relative to whatever parent element that the element is within.  If it is not within a parent element is will default all the way up to the html element at the top of your code, placing it relative to the entire page.  The good thing about it is that once it is in position it does not affect other elements within the page and cannot be affected by other elements.  Absolute positioning is a great tool once you understand how it works hand in hand with the parent element in which it lies.</p>
+				<img src="http://i.stack.imgur.com/F1pK5.gif">
+			<h3>Fixed Positioning</h3>
+				<p>Elements with a fixed position are 'relative' to the actual browser window itself.  What this means is that if you position your header to a 'fixed' position it will not move even when the page is scrolled.  It is in essence 'fixed' in position on the browser window and it will not move from view.  This can be great for header's and nav-bar's so that they are always visible when someone is browsing your site and they quickly want to jump to another section or pages within the site.
+				</p>
+		</div>
+		<div id="footer">
+			<small>&copy; Mark Hoyt 2014</small>
+		</div>
+	</body>
+</html>
