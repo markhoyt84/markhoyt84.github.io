@@ -15,29 +15,32 @@ header {
 
 #header h1 {
 	margin-top: 50px;
-	margin-left: 39%;
-	font-size: 45px;
-	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	font-size: 60px;
+	font-family: 'Permanent Marker', cursive;
 }
 
 #header h3 {
 	position: relative;
-	font-family:  'Quicksand', sans-serif;
-	margin-left: 43%;
+	font-family: 'Permanent Marker', cursive;
 	font-weight: lighter;
 	margin-top: -30px;
 	margin-bottom: 60px;
+	text-align: center;
 }
 
 #home_main_content {
 	background-color: #ff9d69;
-	height:400px;
+	height: 432px;
 	width:85%;
 	clear:both;
-	padding: 10px 10px 10px 10px;
 	margin-top: 80px;
 	margin-bottom: 80px;
+	padding-top: 2em;
+	padding-left: 3.5em;
+	padding-right: 3.5em;
 	margin: 0 auto;
+	position: relative;
 }
 #main_content {
 	background-color: #ff9d69;
@@ -52,50 +55,52 @@ header {
 }
 
 #home_main_content #self {
-	width: 200px;
-	height: 190px;
+	width: 100%;
+	height: 195px;
 	float: left;
-	padding-left: 10px;
 	padding-bottom: 10px;
 }
 
 #home_main_content #cover {
-	width: 300px;
-	height: 395px;
+	width: 34%;
+	height: 400px;
 	float: left;
 	padding-left: 10px;
-	padding-top: 3px;
+	position: absolute;
 }
 
 
 #home_main_content #killin {
-	height: 395px;
-	width: 400px;
+	width: 40%;
+	height: 400px;
 	float: left;
-	padding-left: 35px;
-	padding-top: 2px;
+	position: relative;
 }
 
-#home_main_content table {
-	width: 210px;
+#home_main_content ul {
+	width: 20%;
+	list-style: none;
 	float: left;
 	height: 400px;
+	margin-left: -2em;
+	padding-bottom: 2em;
+	margin-top: 0em;
 }
 
 #home_main_content #handplant{
-	height: 190px;
-	width: 200px;
-	padding-left: 10px;
+	height: 195px;
+	width: 100%;
 	float: left;
 }
 
 #header td {
 	font-family: 'Shadows Into Light', cursive;;
-	font-size: 24px;
-	padding-left: 25px;
+	font-size: 30px;
+	text-align: center;
 }
 
 #header table {
+	width: 85%;
 	margin: 0 auto;
 	margin-top: -25px;
 	margin-bottom: 25px;
