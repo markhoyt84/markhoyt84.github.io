@@ -9,6 +9,7 @@ body{
 }
 
 header {
+	width: 100%;
 	height: 40px;
 	padding: 2em;
 }
@@ -95,7 +96,7 @@ header {
 
 #header td {
 	font-family: 'Shadows Into Light', cursive;;
-	font-size: 30px;
+	font-size: 2em;
 	text-align: center;
 }
 
