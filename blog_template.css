@@ -95,7 +95,7 @@ header {
 }
 
 #header td {
-	font-family: 'Shadows Into Light', cursive;;
+	font-family: 'Shadows Into Light', cursive;
 	font-size: 2em;
 	text-align: center;
 }
@@ -133,4 +133,8 @@ table a:hover {
 	clear: both;
 	text-align: center;
 	margin-top: 1em;
+}
+
+body h1 {
+	font-family: 'Shadows Into Light', cursive;
 }
