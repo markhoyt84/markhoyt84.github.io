@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="blog_template.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <title>Mark Hoyt's DBC Blog</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>MARK HOYT</h1>
+        <h3>MY DBC JOURNEY</h3>
+        <nav><table>
+          <tr>
+            <td><a href="http://markhoyt84.github.io/index.html">Home</a></td>
+            <td><a href="http://markhoyt84.github.io/technical-blog-index.html">Technical Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/cultural-blog-index.html">
+            Cultural Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/unit-1-projects-index.html">Unit-1-Projects</a></td>
+            <td><a href="mailto:mark.hoyt970@gmail.com">Contact</a></td>
+        </tr>
+        </table></nav>
+    </div>
+    <div id="main_content">
+      <h1>Getting loopy yet?</h1>
+        <h2>For loops! Not "for" everything!</h2>
+          <p>For loops are a fairly simple loop that can be very useful but is not used very commonly among rubyist.  They are somewhat primitive and don't offer a lot of flexibility but they share a fairly common syntax with many languages so are useful to know and definitely have their place in the world of ruby!  Using for loops, you are able to repeat a command as many times as you would like, and can also vary its input depending on how many times you run it.  Some common features of a for loop include:
+            <ol><li>for: indicates the beginning of the loop</li>
+                    <li>variable: references the current iteration of the loop</li>
+                    <li>in: special ruby keyword mostly used in for loops</li>
+                    <li>1..20: the range, low and high number that make up the range of numbers that you will be running through the loop, sequentially</li>
+                    <li>do: indicates the beginning of the block of code to be executed repeatedly</li>
+                    <li>end: ends the code block that started with do</li>
+            </ol>
+        </p>
+        <div class = "code_box">
+          <p>for varible in 1..10 do</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love writing ruby!"</p>
+          <p>end</p>
+        </div>
+        <h2>Times loops! Not always the right time!</h2>
+          <p>Times loops are very similar to for loops and most rubyist's prefer to use them in this situation.  They are often more compact than 'for' loops but it boils down to personal preference most of the time.  The times loop has a different syntax than the for loop using a dot syntax (.times) instead of a keyword syntax, this has to do with how the times loop works under the hood, but is used in the same way as for/while/until loops.  They can be used on any variable containing a number or on a number itself.  Some common features of a while loop include:
+            <ol><li>variable/number: references how many times to run the loop</li>
+                    <li>.times: specifies to use the times loop</li>
+                    <li>do: indicates the beginning of the block of code to be executed repeatedly</li>
+                    <li>action: block of code to be repeated (puts, etc.)</li>
+                    <li>end: ends the code block that started with do</li>
+            </ol>
+          </p>
+        <div class = "code_box">
+            <p>10.times do</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love horses!"</p>
+            <p>end</p>
+        </div>
+        <h2>While loops!  While not always the best, a great option!</h2>
+          <p>While loops are one of the next common looping methods seen across programming languages.  While loops execute a block of code as long as or while a condition is true.  They will continue running until a false condition is given.  The thing about while loops is that at some point they must evaluate to 'false' or else an infinite loop will form and your computer's console will crash and you will have to reset it.  Beware of the power of the while loop!  Some common features of a while loop include:
+              <ol><li>variable: set a value for the loop to begin at</li>
+                      <li>while x > y: set values to begin at and to end at, while x is greater than y, continue looping</li>
+                      <li> x += 1: set an incrementer for the loop</li>
+                      <li> action: while this condition is true do this (puts, etc.)</li>
+                      <li> end: ends the code block that started with while</li>
+              </ol>
+            </p>
+           <div class = "code_box">
+              <p>a = 25</p>
+              <p>while a > 0</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;x += 1</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "Millions of peaches, peaches for me!"</p>
+              <p>end</p>
+           </div>
+          <h2>Until loops!  Hopefully not until it hurts!</h2>
+            <p>Until loops are almost identical to while loops except they work conversely.  They will continue executing a block of code as long as it is false, until the condition is true.  They will continue to loop until the condition is met or true.  Yet again if no true condition is ever reached your loop will go until infinity and nowhere.  Until loops are just as powerful as while loops but just say instead up do this while this is true, they say do this until this is true.  Some common features of an until loop include:
+                <ol><li>variable: set a value for the loop to begin at</li>
+                      <li>until x > y: set values to begin at and to end at, until x is greater than y, continue looping</li>
+                      <li> x += 1: set an incrementer for the loop</li>
+                      <li> action: until this condition is true do this (puts, etc.)</li>
+                      <li> end: ends the code block that started with until</li>
+              </ol>
+            </p>
+           <div class = "code_box">
+              <p>b = 0</p>
+              <p>until b == 25 </p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp; b += 5</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp; puts "I like chocholate cake!"</p>
+              <p>end</p>
+           </div>
+          <h2>Each loop: Each of us is important!</h2>
+            <p>Each loops are one of the most commonly used loops in the world of ruby and probably one of the most useful.  Each loops will take a list of variables like an array or hash, and perform the given task or block of code to each element in the list.  Since most computer tasks use lists of variables and want you to do something to each element in that list each loops are very important to be familiar with.  The syntax is quite different than the other loops we have covered but with a little practice it will be easier than you think.  Each loops do use the dot syntax similiar to .times loops though so that should be easy to work with.  Some common features of each loops include:
+                <ol><li>array/hash: a list of variables/numbers/strings to iterate through</li>
+                        <li>.each: specifies to use the each loop</li>
+                        <li>do: indicates the value of the current variable that the loop is looking at</li>
+                        <li>|x|: could be anything, assignment for the current variable</li>
+                        <li>action: each element do this (puts, etc.)</li>
+                        <li>end: ends the block of code that started with .each</li>
+                </ol>
+            </p>
+            <div class = "code_box">
+                <p>family = ["Mark", "Kayla", "Lisa", "Ken"]</p>
+                <p>family.each do |x|</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love #{x}"</p>
+                <p>end</p>
+            </div>
+    </div>
+    <div id="footer">
+      <small>&copy; Mark Hoyt</small>
+    </div>
+  </body>
+</html>
