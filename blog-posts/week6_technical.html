@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="blog_template.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+    <title>Mark Hoyt's DBC Blog</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>MARK HOYT</h1>
+        <h3>MY DBC JOURNEY</h3>
+        <nav><table>
+          <tr>
+            <td><a href="http://markhoyt84.github.io/index.html">Home</a></td>
+            <td><a href="http://markhoyt84.github.io/technical-blog-index.html">Technical Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/cultural-blog-index.html">
+            Cultural Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/unit-1-projects-index.html">Unit-1-Projects</a></td>
+            <td><a href="mailto:mark.hoyt970@gmail.com">Contact</a></td>
+        </tr>
+        </table></nav>
+    </div>
+    <div id="main_content">
+      <h1>In Tonight's Main Event we have Classes vs Modules!</h1>
+        <p>Classes and modules are very similar ideas in Ruby!  In this first paragraph we will talk about some of the similarties that these two different storage systems.  Classes and modules are in essence both just bundles of methods and constants that objects can be modeled off of.  The class Class is actually a subclass of modules, so that means that every class object is actually a module.  Both of them are used to bundle up information about objects that will be created later on.  Since everything in Ruby is an object, both class and module are objects and descend from the superclass Object which decends from the superclass BasicObject, so both of them share the methods that those objects have access to which are ironically stored in a module in Object named Kernal.  When you are writing a module it is very similar to writing a class except that you start the definition with the keyword module instead of class like so:</p>
+        <prettify lang=html linenums=true>
+        <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+          module NameOfModule
+            def here_is_a_method
+              puts "I am a method in the module"
+            end
+
+            def here_is_another_method
+              puts "I am another method in the module"
+            end
+          end
+        </pre>
+      <h2>Some distinct differences!</h2>
+        <p>Even though classes and modules seem to be almost the exact same thing, there are some very distinct differences between the two.  The first main difference is that classes can be instantiated, while modules can not be.  What this means is that classes can be used for particular object instances and modules cannot be.  The next main difference is that classes are used for object creation while modules are used within classes as a 'mixin' and provide a namespace, modules themselves cannot create objects.  Classes have similar construction to modules except that classes contain variables which modules do not contain.  When naming classes it is good etiquette to name them after a noun and modules after adjectives.  Classes also can inherit behavior or act as a base for inheritance, where modules have no ability for inheritence.  Basically, modules are about providing methods that can be used across multiple classes, classes can only have one superclass but can have multiple modules.  When you think about classes you need to remember that they are about objects; where modules are about methods.  Classes cannot be included elsewhere within your code and modules can be included in both classes and other modules, which includes all of the instance methods of that module:</p>
+        <prettify lang=html linenums=true>
+        <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+          require NameOfModule
+          class NameOfClass
+            include NameOfModule
+          end
+        </pre>
+        <p>is the same as: </p>
+        <prettify lang=html linenums=true>
+        <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+          class NameOfClass
+              def here_is_a_method
+                puts "I am a method in the module"
+              end
+
+              def here_is_another_method
+                puts "I am another method in the module"
+            end
+          end
+        </pre>
+      <h2>When to choose one over the other?</h2>
+        <p>When it comes to choosing a class over a module there are a few important factors going into that decision.  Obviously when it comes to object creation you need to create a class.  So saying we already have a class created, it is important to remember that classes can only inherit from one superclass, but can have as many mix-in modules as you would like.  You have to be careful not to waste your one inheritance on another class when it is just some characteristics that could be best suited in a module. The way to think about it is that you model objects or things in classes, and you model the characteristics or properties of those objects or things in modules.  After reading this I hope that you can see that classes and modules are very similar ideas but each has their own place within the beauty of ruby and as much as they work together are different tools for different jobs.</p>
+    </div>
+    <div id="footer">
+      <small>&copy; Mark Hoyt 2014</small>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,8 @@
     <link type="text/css" rel="stylesheet" href="blog_template.css"/>
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+    <title>Mark Hoyt's DBC Blog</title>
     <title>Mark Hoyt's DBC Blog</title>
   </head>
   <body>
@@ -33,11 +35,12 @@
                     <li>end: ends the code block that started with do</li>
             </ol>
         </p>
-        <div class = "code_box">
-          <p>for varible in 1..10 do</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love writing ruby!"</p>
-          <p>end</p>
-        </div>
+          <prettify lang=html linenums=true>
+          <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+            for varible in 1..10 do
+              puts "I love writing ruby!"
+            end
+          </pre>
         <h2>Times loops! Not always the right time!</h2>
           <p>Times loops are very similar to for loops and most rubyist's prefer to use them in this situation.  They are often more compact than 'for' loops but it boils down to personal preference most of the time.  The times loop has a different syntax than the for loop using a dot syntax (.times) instead of a keyword syntax, this has to do with how the times loop works under the hood, but is used in the same way as for/while/until loops.  They can be used on any variable containing a number or on a number itself.  Some common features of a while loop include:
             <ol><li>variable/number: references how many times to run the loop</li>
@@ -47,11 +50,12 @@
                     <li>end: ends the code block that started with do</li>
             </ol>
           </p>
-        <div class = "code_box">
-            <p>10.times do</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love writing ruby!"</p>
-            <p>end</p>
-        </div>
+          <prettify lang=html linenums=true>
+          <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+            10.times do
+               puts "I love writing ruby!"
+            end
+          </pre>
         <h2>While loops!  While not always the best, a great option!</h2>
           <p>While loops are one of the next common looping methods seen across programming languages.  While loops execute a block of code as long as or while a condition is true.  They will continue running until a false condition is given.  The thing about while loops is that at some point they must evaluate to 'false' or else an infinite loop will form and your computer's console will crash and you will have to reset it.  Beware of the power of the while loop!  Some common features of a while loop include:
               <ol><li>variable: set a value for the loop to begin at</li>
@@ -61,13 +65,14 @@
                       <li> end: ends the code block that started with while</li>
               </ol>
             </p>
-           <div class = "code_box">
-              <p>a = 0</p>
-              <p>while a < 25</p>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;x += 1</p>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "Millions of peaches, peaches for me!"</p>
-              <p>end</p>
-           </div>
+          <prettify lang=html linenums=true>
+          <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+            a = 0
+            while a < 25
+              x += 1
+              puts "Millions of peaches, peaches for me!"
+            end
+            </pre>
           <h2>Until loops!  Hopefully not until it hurts!</h2>
             <p>Until loops are almost identical to while loops except they work conversely.  They will continue executing a block of code as long as it is false, until the condition is true.  They will continue to loop until the condition is met or true.  Yet again if no true condition is ever reached your loop will go until infinity and nowhere.  Until loops are just as powerful as while loops but just say instead up do this while this is true, they say do this until this is true.  Some common features of an until loop include:
                 <ol><li>variable: set a value for the loop to begin at</li>
@@ -77,13 +82,14 @@
                       <li> end: ends the code block that started with until</li>
               </ol>
             </p>
-           <div class = "code_box">
-              <p>b = 0</p>
-              <p>until b == 25 </p>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp; b += 1</p>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp; puts "Millions of peaches, peaches for me!"</p>
-              <p>end</p>
-           </div>
+            <prettify lang=html linenums=true>
+            <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+            b = 0
+            until b == 25
+               b += 1
+               puts "Millions of peaches, peaches for me!"
+            end
+            </pre>
           <h2>Each loop: Each of us is important!</h2>
             <p>Each loops are one of the most commonly used loops in the world of ruby and probably one of the most useful.  Each loops will take a list of variables like an array or hash, and perform the given task or block of code to each element in the list.  Since most computer tasks use lists of variables and want you to do something to each element in that list each loops are very important to be familiar with.  The syntax is quite different than the other loops we have covered but with a little practice it will be easier than you think.  Each loops do use the dot syntax similiar to .times loops though so that should be easy to work with.  Some common features of each loops include:
                 <ol><li>array/hash: a list of variables/numbers/strings to iterate through</li>
@@ -94,12 +100,13 @@
                         <li>end: ends the block of code that started with .each</li>
                 </ol>
             </p>
-            <div class = "code_box">
-                <p>family = ["Mark", "Kayla", "Lisa", "Ken"]</p>
-                <p>family.each do |x|</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;puts "I love #{x}"</p>
-                <p>end</p>
-            </div>
+            <prettify lang=html linenums=true>
+            <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+            family = ["Mark", "Kayla", "Lisa", "Ken"]
+            family.each do |x|
+              puts "I love #{x}"
+            end
+            </pre>
             <h2>Which one is for right for your situation?</h2>
               <p>Choosing the right loop can be a difficult task in programming.  As you can see in the examples I gave you, a lot of tasks can be accomplished using more than one loop.  A lot of the choice is about whichever loops you feel more comfortable with, and whichever loops make more sense to you.  Other than that if you are wanting to iterate over a list of numbers that you already have you will want to go with an each loop to iterate over each element within the list or array.  If you want to do something and you know how many times you would like to do it then a for loop is a great option.  If you are not sure how many times you would like to do an action but want to rely on a variable instead, then a times loop is a great alternative, both the for loops and times loops are great for looping through a list of numbers sequentially.  While and until loops are great to do something a specified amount of times while being able to control the incrementer and not have to do it sequentially.  As I said before a lot of different loop options can be used to acheive the same results but these are just a few tips to help you narrow down your options.</p>
     </div>
