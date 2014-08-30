@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="blog_template.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <title>Mark Hoyt's DBC Blog</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>MARK HOYT</h1>
+        <h3>MY DBC JOURNEY</h3>
+        <nav><table>
+          <tr>
+            <td><a href="http://markhoyt84.github.io/index.html">Home</a></td>
+            <td><a href="http://markhoyt84.github.io/technical-blog-index.html">Technical Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/cultural-blog-index.html">
+            Cultural Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/unit-1-projects-index.html">Unit-1-Projects</a></td>
+            <td><a href="mailto:mark.hoyt970@gmail.com">Contact</a></td>
+        </tr>
+        </table></nav>
+    </div>
+    <div id="main_content">
+      <h1>In Tonight's Epic battle we have SQL vs. NoSQL!</h1>
+      <img src="http://cmsfiles.sbp-romania.com/02273/balance3.png">
+        <h2>Old faithful vs Young and New</h2>
+          <p>The debate between SQL and NoSQL databases I found to be a quite heated one.  Many people have very different opinions on the benefits of either one of them and the usefulness of them.  After researching them for a while I found that they are very different database systems that both seem to have their places.  SQL databases are tried and true with a very reliable relational algebra and relational calculus mixture.  While NoSQL databases are non-relational ones that focus more on key-value pairs.  While still relatively new, they are used by some major players in the game like Craigslist, The New York Times and MTV Networks.  Though these databases are constructed very differently, they both still serve a very similar purpose, to store mass amounts of information.  Here are a few key differences between the two:</p>
+        <h2>SQL Databases</h2>
+          <ol>
+            <li>Primarily called as relational databases</li>
+            <li>Table based databases, consisting of tables and rows</li>
+            <li>Predefined Schemas definitions that must be adhered to</li>
+            <li>Vertically scalable, managable by increasing CPU, RAM, SSD on single server</li>
+            <li>Uses SQL for defining and manipulating objects, is an ISO/IEC standard</li>
+            <li>Excellent support is available for SQL because it is an older technology</li>
+            <li>Can switch vendors if you have too because of common relational model in SQL</li>
+            <li>SQL Databases emphasize on A-C-I-D properties:</li>
+                <ul>
+                  <li> A - <a href= "http://en.wikipedia.org/wiki/Atomicity_(database_systems)">Atomicity</a></li>
+                  <li> C - <a href= "http://en.wikipedia.org/wiki/Consistency_(database_systems)">Consistency</a></li>
+                  <li> I - <a href= "http://en.wikipedia.org/wiki/Isolation_(database_systems)">Isolation</a></li>
+                  <li>D - <a href= "http://en.wikipedia.org/wiki/Durability_(database_systems)">Durability</a></li>
+                </ul>
+              <li>Not best fit for heirarchical Data but can through recursive common table expressions</li>
+              <li>Best fit for heavy-duty transactional applications because of the stability and promise of atomicity</li>
+          </ol>
+        <h2>NoSQL Databases</h2>
+          <ol>
+            <li>Primarily called as non-relational or distributed databases</li>
+            <li>Document based databases, key-value pairs, documents, graphs, or wide column stores</li>
+            <li>Dynamic Schemas for unstructured data</li>
+            <li>Horizontally scalable, just add a few more servers to handle increased traffic</li>
+            <li>Queries focus on collections of documents and can vary from database to database</li>
+            <li>Support for NoSQL can only come from your vendor because there is no common relational model</li>
+            <li>Cannot change vendors because they are all so different, essentially locked-in</li>
+            <li>NoSQL Databases follow the Brewers CAP theorem:</li>
+              <ul>
+                <li>C - <a href="http://en.wikipedia.org/wiki/Consistency_(database_systems)">Consistency</a></li>
+                <li>A - <a href= "http://en.wikipedia.org/wiki/Availability">Availability</a></li>
+                <li>P - <a href= "http://en.wikipedia.org/wiki/Network_partition">Partition Tolerance</a></li>
+              </ul>
+            <li>Better fit for heirarchical data as they store data in a key-value pair and are highly preferred for storing large data sets</li>
+          </ol>
+        <h2>My Opinion</h2>
+          <p>After reading through quite a few different resources on the differences between SQL and NoSQL databases I have very mixed feelings between the two.  On the SQL side of things I feel that they are a much more thought out system of storing data that runs off of tried and true techniques.  Since they have been around for almost 30 years they are well maintained and if you do have any issues you can easily find help to fix them.  Programmers have been working with them for so long and have worked with every issue that it is easy to get help.  On the NoSQL side of things I think that they are great in the sense of having dynamic schemas that can be changed and can evolve your data schema without modifying the existing data.  NoSQL databases can be faster at times and are a better fit for large data sets.  One of the last points on NoSQL databases to be made is that they tend to represent entities in a more natural way.  SQL databases have normalization rules that break data in an artificial way in order to avoid redundancy.  Because of this SQL databases end up, most of the time, with objects that do not represent the real-world very well, while NoSQL databases do a better job at representing real-world objects.  So to sum this up I feel that I personally like the idea of SQL databases because of the support that you can get, the common relational model, the atomicity and promise of stability and consistency of your data.  NoSQL databases sound like a great idea in the future but as of right now I feel that they do not have a common rock-solid relational model, lack of support and lack of a common language(like SQL).  </p>
+    </div>
+    <div id="footer">
+      <small>&copy; Mark Hoyt 2014</small>
+    </div>
+  </body>
+</html>
