@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="cheatsheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+     <script type="text/javascript">
+function unhide(clickedButton, divID) {
+var item = document.getElementById(divID);
+if (item) {
+    if(item.className=='hidden'){
+        item.className = 'unhidden' ;
+        clickedButton.value = 'close example'
+    }else{
+        item.className = 'hidden';
+        clickedButton.value = 'view example'
+    }
+}}</script>
+    <title>Javascript Object Ultimate Cheatsheet</title>
+  </head>
+  <div class="wrapper">
+  <div id="header">
+      <h1>Javascript Object Ultimate Cheatsheet</h1>
+        <h2>Everything is an Object</h2>
+  </div>
+  <body>
+    <div id="main_content">
+      <div id = "index">
+      <h3>Index:</h3>
+        <ol>
+          <li><a href="#what">What are Javascript Objects</a></li>
+          <li><a href="#obprop">Object Properties</a></li>
+          <li><a href="#obmethods">Object Methods</a></li>
+          <li><a href="#creating">Creating an Object</a></li>
+            <ol>
+              <li><a href="#oblit">Object Literal</a></li>
+              <li><a href="#obnew">Object New</a></li>
+              <li><a href="#obconstructor">Object Constructor</a></li>
+            </ol>
+          <li><a href="#thisob">What's up with <strong><em>THIS</em></strong>!</a></li>
+          <li><a href="#builtin">Built in Constructors</a></li>
+          <li><a href="#why">Why use Primitive Values</a></li>
+          <li><a href="#mutation">Object Mutation</a></li>
+        </ol>
+      </div>
+      <div id = "what" class = "javaobjects">
+      <h3>What are Javascript Objects?</h3>
+          <p>Object is the main data type in JavaScript. "Everything" in JavaScript is an Object.  Even primitive data types (except null and undefined) can be treated as objects.  Here is a list of some different objects in Javascript:</p>
+          <ul>
+            <li>Booleans can be objects (or primitive data treated as objects)</li>
+            <li>Numbers can be objects (or primitive data treated as objects)</li>
+            <li>Strings are also objects (or primitive data treated as objects)</li>
+            <li>Dates are always objects</li>
+            <li>Maths and Regular Expressions are always objects</li>
+            <li>Arrays are always objects</li>
+            <li>Even functions are always objects</li>
+          </ul>
+          <p>A JavaScript object is a complex variable, with properties and methods. The content of an object is composite: It can contain multiple property types (both primitive values and other objects). In JavaScript, all values except primitive values are objects.  Primitive values are: strings ("John Doe"), numbers (3.14), true, false, null, and undefined.<br>
+          <a href="#index">Back To Top</a>
+          </p>
+      </div>
+      <div id = "obprop" class = "javaobjects">
+      <h3>Object Properties</h3>
+        <p>Properties are the values associated with an object.  A JavaScript object is an unordered collection of properties.  Each property has a name and a value.  The syntax for accessing the property of an object is:</p>
+         <div id="properties" class="hidden">
+            <div class="properties_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                objectName.property
+                      or
+                objectName[expression]
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'properties') " value="view example">
+          <a href="#index">Back To Top</a>
+      </div>
+      <div id = "obmethods" class = "javaobjects">
+      <h3>Object Methods</h3>
+        <p>Methods are the actions that can be performed on objects.  You can call a method with the following syntax:</p>
+          <div id="method" class="hidden">
+            <div class="method_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                objectName.methodName()
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'method') " value="view example">
+          <a href="#index">Back To Top</a>
+      </div>
+      <div id = "creating" class = "javaobjects">
+      <h3>Creating an Object in Javascript</h3>
+        <p>With JavaScript, you can define and create your own objects.  There are different ways to create new objects:</p>
+        <div id = "oblit">
+        <h4>Define and create a single object, using an object literal.</h4>
+          <p>This is the easiest way to create a JavaScript Object.  Using an object literal, you both define and create an object in one statement.  An object literal is a list of name:value pairs (like age:50) inside curly braces {}.  The following example creates a new JavaScript object with four properties:</p>
+          <div id="literal" class="hidden">
+            <div class="literal_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'literal') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+        <div id = "obnew">
+        <h4>Define and create a single object, with the keyword new.</h4>
+          <div id="newkey" class="hidden">
+            <div class="newkey_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                var person = new Object();
+                person.firstName = "John";
+                person.lastName = "Doe";
+                person.age = 50;
+                person.eyeColor = "blue";
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'newkey') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+        <div id = "obconstructor">
+        <h4>Define an object constructor, and then create objects of the constructed type.</h4>
+          <p>The examples above are limited in many situations. They only create a single object.  Sometimes we like to have an "object type" that can be used to create many objects of one type.  The standard way to create an "object type" is to use an object constructor function:</p>
+          <div id="obconst" class="hidden">
+            <div class="obconst_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                function person(first, last, age, eyecolor) {
+                  this.firstName = first;
+                  this.lastName = last;
+                  this.age = age;
+                  this.eyeColor = eyecolor;
+                }
+
+                var myFather = new person("John", "Doe", 50, "blue");
+                var myMother = new person("Sally", "Rally", 48, "green");
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'obconst') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+      </div>
+        <div id = "thisob" class = "javaobjects">
+        <h3>What's up with <u><strong><em>THIS</em></strong></u>!</h3>
+          <p>In JavaScript, the thing called <strong><em>this</em></strong>, is the object that "owns" the JavaScript code.  The value of <strong><em>this</em></strong>, when used in a function, is the object that "owns" the function.  The value of <strong><em>this</em></strong>, when used in an object, is the object itself.  The <strong><em>this</em></strong> keyword in an object constructor does not have a value. It is only a substitute for the new object.  The value of <strong><em>this</em></strong> will become the new object when the constructor is used to create an object.  Note that <strong><em>this</em></strong> is not a variable. It is a keyword. You cannot change the value of <strong><em>this</em>.</p></strong>
+          <div id="javathis" class="hidden">
+            <div class="javathis_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'javathis') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+        <div id = "builtin" class = "javaobjects">
+        <h3>Built-In Constructors for your use</h3>
+          <p>JavaScript has built-in constructors for native objects:</p>
+          <div id="builtconst" class="hidden">
+            <div class="builtconst_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                var x1 = new Object();    // A new Object object
+                var x2 = new String();    // A new String object
+                var x3 = new Number();    // A new Number object
+                var x4 = new Boolean()    // A new Boolean object
+                var x5 = new Array();     // A new Array object
+                var x6 = new RegExp();    // A new RegExp object
+                var x7 = new Function();  // A new Function object
+                var x8 = new Date();      // A new Date object
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'builtconst') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+        <div id = "why" class = "javaobjects">
+        <h3>Why Use Primitive Values, Instead of Complex Objects!</h3>
+          <p>As you can see, JavaScript has object versions of the primitive data types String, Number, and Boolean.  There is no reason to create complex objects. Primitive values execute much faster.
+            <ul>
+              <li>There is no reason to use new Array(). Use array literals instead: []</li>
+              <li>There is no reason to use new RegExp(). Use pattern literals instead: /()/</li>
+              <li>There is no reason to use new Function(). Use function expressions instead: function () {}.</li>
+              <li>There is no reason to use new Object(). Use object literals instead: {} </li>
+            </ul><a href="#index">Back To Top</a><br>
+          </p>
+        </div>
+        <div id = "mutation" class = "javaobjects">
+        <h3>JavaScript Objects are Mutable</h3>
+          <p>Object are mutable: They are addressed by reference, not by value.  If y is an object, the following statement will not create a copy of y:</p>
+          <prettify lang=html linenums=true>
+          <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                var x = y;  // This will not create a copy of y.
+          </pre>
+          <p>The object x is not a copy of y. It is y. Both x and y points to the same object.  Any changes to y will also change x, because x and y are the same object.</p>
+           <div id="mutate" class="hidden">
+            <div class="mutate_ex">
+              <prettify lang=html linenums=true>
+              <pre class="prettyprint linenums" id="quine" style="border:4px solid #88c">
+                var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+                var x = person
+                x.age = 10;  // This will change both x.age and person.age
+              </pre>
+            </div>
+          </div>
+          <input type="button" onclick="unhide(this, 'mutate') " value="view example">
+          <a href="#index">Back To Top</a>
+        </div>
+    </div>
+  </body>
+  <div id="footer">
+      <p>Javascript Object Cheatsheet</p>
+      <p><a href="http://markhoyt84.github.io/index.html">Back to Mark Hoyt's Blog</a></p>
+      <small>&copy; Mark Hoyt 2014</small>
+  </div>
+</div>
+</html>
