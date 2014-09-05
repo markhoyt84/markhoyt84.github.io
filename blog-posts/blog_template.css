@@ -164,3 +164,23 @@ body #main_content h1 {
 	font-size: 20px;
 	font-family: arial;
 }
+
+#version {
+	margin: 0 auto;
+	border-width: 0.3em;
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+}
+
+#version td {
+	border-width: 0.1em;
+	border-style: solid;
+	border-color: black;
+	padding: 5px;
+}
+
+#def {
+	font-family: arial;
+	font-size: 1.3em;
+}

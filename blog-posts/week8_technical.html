@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="blog_template.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <title>Mark Hoyt's DBC Blog</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>MARK HOYT</h1>
+        <h3>MY DBC JOURNEY</h3>
+        <nav><table>
+          <tr>
+            <td><a href="http://markhoyt84.github.io/index.html">Home</a></td>
+            <td><a href="http://markhoyt84.github.io/technical-blog-index.html">Technical Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/cultural-blog-index.html">
+            Cultural Blog</a></td>
+            <td><a href="http://markhoyt84.github.io/unit-1-projects-index.html">Unit-1-Projects</a></td>
+            <td><a href="mailto:mark.hoyt970@gmail.com">Contact</a></td>
+        </tr>
+        </table></nav>
+    </div>
+    <div id="main_content">
+      <h1>Ruby-on-RAILS!</h1>
+      <h2>So what is with the Rails?</h2>
+        <p>When I first started looking into DBC I kept hearing the phrase "Ruby on Rails".  At first this did not have a lot of meaning to me. I knew what "Ruby" was because I began learning to read and write using this programming language, but I never really took the time to think further as to what "Ruby on Rails" might mean.  When I saw this as a topic on our technical blog list I was very intruiged by it and felt like I must look into it in more detail!</p>
+
+        <p>Rails is an <a href="#def">open-source</a> web app framework all written in Ruby.  Rails is a <a href="#def">full-stack framework</a> that uses similar software engineering concepts and utilizes many common patterns including <a href="#def">convention over configuration(COC)</a>, <a href="#def">don't repeat yourself(DRY)</a> which we have learned quite a lot about in DBC so far, the <a href="">active record pattern</a> and model-view-controller(MVC).  Rails uses the MVC pattern to organize application programming.  Usually in a default <strong><em>MODEL</em></strong> in Ruby-on-Rails, the configuration will be a ruby file mapped to a table in a database.  Using the COC philosophy we would link the ruby file to the database with the table with similar names ie: CLASS Cars with TABLE Cars.  The <strong><em>VIEW</em></strong> in the default configuration of Rails is an erb file, which is compiled into HTML at run-time but can be viewed in many other templating systems as well.  Now with Ruby on Rails Version 2.0 or newer both HTML and XML are offered as standard output formats. The <strong><em>CONTROLLER</em></strong> is the component of Rails that responds to external requests from the server to the app by deciding which files to render.  The controllers can provide one or more actions, the actions in Rails usually refer to a basic unit that tells it how to respond to specific external requests from the web-browser.  One of the keys to these actions/controllers being accessible is by mapping the routes correctly, if not mapped correctly they have no effect.  The maps are set up in the routes configuration file.</p>
+
+        <p>Rails is know for being easily readable and full of tools that make common development tasks easier.  Many "gems" and "tools" come pre-packaged with Ruby-on-Rails to provide a basic development environment.  Rails uses extensive Javascript libraries including Jquery which is the default javascript library in Rails version 3.1 and higher.  In this version CoffeeScript is also the new default Javascript language.  Ruby-on-Rails is sepparated into various packages as well including the following:</p>
+          <ul>
+            <li>ActiveRecord - object-oriented-mapping system for database access</li>
+            <li>ActiveResource - provides web services</li>
+            <li>ActionPack - framework for handling and responding to web requests</li>
+            <li>ActiveSupport - a collection of utility classes and standard library extensions that were found useful for the Rails framework</li>
+            <li>ActionMailer - allows you to send emails from your application using mailer classes and views</li>
+          </ul>
+        <p>Ruby-on-Rails often includes RubyGems, which is a package-manager for Ruby that gives a standard format for the distribution of Ruby libraries and programs, which are called "gems" in Ruby.  The gems include package information along with the files to install for the program.  A package management system like RVM can be used to update the current version of Ruby on a system as well as to get new gems for use within Ruby.
+        </p>
+
+        <h2>History of Rails</h2>
+        <p>In July of 2004 <a href="http://en.wikipedia.org/wiki/David_Heinemeier_Hansson">David Heinemeier Hansson</a>released Rails as an open source framwork that he had extracted from <a href="http://en.wikipedia.org/wiki/Basecamp_Classic">Basecamp</a>, which is a project management tool.  However Hansson did not share <a href="#def">commit</a> rights to the project until February of 2005.  The first major milestone for Rails was two years later in August of 2006 when industry leader Apple announced that it would include Ruby on Rails with Mac OSX "Leopard".  Here is a short Version History of Rails:</p>
+        <table id="version">
+          <thead><tr>
+            <th>Version</th>
+            <th>Date</th>
+          </tr></thead><tbody>
+          <tr>
+            <td>1.0</td>
+            <td>December 13, 2005</td>
+          </tr>
+          <tr>
+            <td>1.2</td>
+            <td>January 19, 2007</td>
+          </tr>
+          <tr>
+            <td>2.0</td>
+            <td>December 7, 2007</td>
+          </tr>
+          <tr>
+            <td>2.1</td>
+            <td>June 1, 2008</td>
+          </tr>
+          <tr>
+            <td>2.2</td>
+            <td>November 21, 2008</td>
+          </tr>
+          <tr>
+            <td>2.3</td>
+            <td>March 16, 2009</td>
+          </tr>
+          <tr>
+            <td>3.0</td>
+            <td>August 29, 2010</td>
+          </tr>
+          <tr>
+            <td>3.1</td>
+            <td>August 31, 2011</td>
+          </tr>
+          <tr>
+            <td>3.2</td>
+            <td>January 20, 2012</td>
+          </tr>
+          <tr>
+            <td>4.0</td>
+            <td>June 25, 2013</td>
+          </tr>
+          <tr>
+            <td>4.1</td>
+            <td>April 8, 2014</td>
+          </tr>
+        </tbody>
+        </table>
+        <p>In December of 2008 <a href="#def">Merb</a>, which was another framework for web apps was released and Ruby decided to work with Merb to integrate the best of both worlds into Rails 3. Rails version 2.3 was released later in 2009 and had some major improvements to the Rails network that made it a top contender in frameworks.  These improvments included new developments in templates, engines, <a href="#def">Rack</a>, and nested model forms. In 2010 Merb was merged with Rails to create an even stronger framework.  Through the early version of Rails 3.0 many new features were added including JQuery, Coffeescript, SASS, faster development mode and routing engines.  Earlier this year Rails 4.1 was released introducing Spring, Variants, Enums, Mailer previews, and secrets.yml.  As I hope you can see Ruby and Rails are amazing languages and frameworks.  Even though they are different concepts, they work seamlessly together to create one of the most powerful and fastest growing open source web app frameworks in the world.  There is no telling where Ruby-On-Rails will take us, but I can only see it expanding in the future to become the best programming language and framework on the web.</p>
+
+        <div id="def">
+          <h2>Definitions</h2>
+            <ul>
+              <li><strong>Open Source</strong> - In production and development, open source as a development model promotes a universal access via free license to a product's design or blueprint, and universal redistribution of that design or blueprint, including subsequent improvements to it by anyone.</li>
+              <li><strong>Full Stack Framework</strong> - A full stack is a mature framework that often gathers multiple libraries useful for development. These form a single cohesive software stack for developers to use.</li>
+              <li><strong>Convention-Over-Configuration</strong> - Convention over configuration (also known as coding by convention) is a software design paradigm which seeks to decrease the number of decisions that developers need to make, gaining simplicity, but not necessarily losing flexibility.</li>
+              <li><strong>Don't Repeat Yourself</strong> - In software engineering, don't repeat yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.</li>
+              <li><strong>Active Record Pattern</strong> - In software engineering, the active record pattern is an architectural pattern found in software that stores its data in relational databases.</li>
+              <li><strong>Package Management System</strong> - A package management system, also called package manager, is a collection of software tools to automate the process of installing, upgrading, configuring, and removing software packages for a computer's operating system in a consistent manner.</li>
+              <li><strong>Commit</strong> - In computer science and data management, a commit is the making of a set of tentative changes permanent.</li>
+              <li><strong>Merb</strong> - a model view controller web framework written in Ruby. Merb was merged into Rails web framework on December 23, 2008[3] as part of the Ruby on Rails 3.0 release.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+      <small>&copy; Mark Hoyt 2014</small>
+    </div>
+  </body>
+</html>
